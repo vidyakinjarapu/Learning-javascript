@@ -3,7 +3,7 @@
   <head>
     <title>HTML form manipulate with js</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main2.js"></script>
+
   </head>
 
   <body>
@@ -15,7 +15,7 @@
     <section class="container">
       <form id="my-form">
         <h1>Add User</h1>
-        <div class="msg">
+        <div class="msg"></div>
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name">
@@ -24,12 +24,12 @@
           <label for="email">Email:</label>
           <input type="email" id="email">
         </div>
-        <input class="btn" type="button" name="Submit" value="Submit">
-        </div>
+        <input class="btn" type="submit" value="Submit">
       </form>
     </section>
 
     <ul id="users"></ul>
+
     <!-- <ul class="items">
       <li class="item">Item 1</li>
       <li class="item">Item 2</li>
@@ -37,4 +37,6 @@
     </ul> -->
 
   </body>
+  <!-- used in last as it loads html file first -->
+  <script src="main2.js"></script>
 </html>

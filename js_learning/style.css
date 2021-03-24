@@ -73,7 +73,7 @@ header {
 
 .bg-dark {
   background: #333;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .error {
