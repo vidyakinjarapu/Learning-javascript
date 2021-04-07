@@ -4,6 +4,7 @@ function Person(firstname, lastname, dob) {
   this.lastname = lastname;
   this.dob = new Date(dob);
 }
+
 //methods
 Person.prototype.getBirthYear = function() {
   return this.dob.getFullYear();
@@ -14,11 +15,10 @@ Person.prototype.getfullname = function() {
 
 //Instantiate object
 const person1 = new Person('Mary', 'Smith', '2/2/1990' );
-const person2 = new Person('larry', 'page', '3/6/1980')
+const person2 = new Person('larry', 'page', '3/6/1980');
 
 console.log(person1.getfullname());
 console.log(person2.getBirthYear());
-
 
 //ES6 standards -- constructor function
 class n_Person {
@@ -37,7 +37,7 @@ class n_Person {
 
 //instantiate object
 const person3 = new n_Person('kate', 'Smidth', '2/2/1987');
-const person4 = new n_Person('krish', 'rian', '3/6/1988')
+const person4 = new n_Person('krish', 'rian', '3/6/1988');
 
 console.log(person3.getfullname());
 console.log(person4.getBirthYear());
