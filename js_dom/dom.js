@@ -100,9 +100,9 @@
 
 
 // TRAVERSING THE DOM //
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 
-// // PARENTNODE PROPERTY //
+// PARENTNODE PROPERTY //
 // console.log(itemList);
 // console.log(itemList.parentNode)
 // itemList.parentNode.style.backgroundColor = 'pink'
@@ -128,8 +128,46 @@ var itemList = document.querySelector('#items');
 // itemList.lastElementChild.textContent = 'Hello world2!'
 
 //NEXTSIBILING
-console.log(itemList.nextSibling)
-console.log(itemList.nextElementSibling)
+// console.log(itemList.nextSibling)
+// console.log(itemList.nextElementSibling)
 
-//PREVIOUSSIBILING
-console.log(itemList.previousElementSibling)
+// //PREVIOUSSIBILING
+// console.log(itemList.previousElementSibling)
+
+// CREATE ELEMENT USING DOM //
+//create div
+// var newDiv = document.createElement('div');
+// //create class //
+// newDiv.className = 'hello'
+// //add Id
+// newDiv.id = 'hello1'
+// //add attribute
+// newDiv.setAttribute('title', 'Hello Div');
+// //create text node
+// newDivText = document.createTextNode('Hello World!')
+// //Add text to div
+// newDiv.appendChild(newDivText)
+
+// //Add div to header-->container and before h1 element
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
+// container.insertBefore(newDiv, h1);
+
+// newDiv.style.fontSize = '30px';
+
+// console.log(newDiv)
+
+// <--DOM part-3 : Event listners-->
+
+var button = document.querySelector('#button');
+
+// button.addEventListener('click', function(){
+// 	console.log(123)
+// })
+
+// Adding Named functions
+button.addEventListener('click', buttonClick);
+
+function buttonClick(){
+	alert('button clicked');
+}
