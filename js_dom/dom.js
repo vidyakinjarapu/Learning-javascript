@@ -157,17 +157,103 @@
 
 // console.log(newDiv)
 
+
+
 // <--DOM part-3 : Event listners-->
 
-var button = document.querySelector('#button');
+// var button = document.querySelector('#button');
 
 // button.addEventListener('click', function(){
 // 	console.log(123)
 // })
 
 // Adding Named functions
-button.addEventListener('click', buttonClick);
+// button.addEventListener('click', buttonClick);
 
-function buttonClick(){
-	alert('button clicked');
+// // function buttonClick(){
+// // 	// alert('button clicked');
+// // 	document.getElementById('header-title').textContent = 'Hello DOM!';
+// // 	document.querySelector('#main').style.backgroundColor = 'pink';
+
+// // }
+// function buttonClick(e){
+// 	// console.log(e);
+// 	// console.log(e.target);
+// 	// console.log(e.target.id);
+// 	// console.log(e.target.className);
+// 	// console.log(e.target.classList);
+
+// 	// var output = document.getElementById('output');
+// 	// output.innerHTML = '<h3>'+e.target.classList+'</h3>'
+
+// 	// console.log(e.type)
+// 	// console.log(e.clientX); //click on x axis
+// 	// console.log(e.clientY); //click on y axis
+// 	//console.log(e.offsetX)
+// 	// console.log(e.offsetY)
+
+// 	// console.log(e.altKey);
+// 	// console.log(e.ctrlKey);
+// 	// console.log(e.shiftKey)
+
+// }
+
+
+// RUNEVENT --> TYPES OF EVENTS//
+
+var button = document.querySelector('#button');
+var box = document.querySelector('#box');
+var output = document.querySelector('#output');
+
+// button.addEventListener('click', runevent);
+//button.addEventListener('dblclick', runevent);
+//  button.addEventListener('mousedown', runevent);
+// button.addEventListener('mouseup', runevent)
+
+// box.addEventListener('mouseenter', runevent);
+// box.addEventListener('mouseleave', runevent);
+
+// // box.addEventListener('mouseover', runevent); //inside element
+// box.addEventListener('mouseout', runevent); //inside element
+
+// box.addEventListener('mousemove', runevent);
+
+// function runevent(e) {
+// 	console.log('Event Type: '+e.type)
+// 	// output.innerHTML = '<h3>mouseX: '+e.offsetX+'</h3><h3>mouseY: '+e.offsetY+'</h3>'
+// 	//box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 20)";
+// 	document.body.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 30)";
+// }
+
+
+
+// KEYBOARD EVENTS //
+
+var itemInput = document.querySelector('input[type = "text"]');
+var form = document.querySelector('.form');
+var select = document.querySelector('select')
+
+// itemInput.addEventListener('keydown', runevent);
+// itemInput.addEventListener('keyup', runevent);
+// itemInput.addEventListener('keypress', runevent);
+
+// itemInput.addEventListener('focus', runevent);
+// itemInput.addEventListener('blur', runevent);
+
+// itemInput.addEventListener('cut', runevent);
+// itemInput.addEventListener('paste', runevent);
+
+// itemInput.addEventListener('input', runevent);
+
+// select.addEventListener('change', runevent);
+// select.addEventListener('input', runevent);
+
+form.addEventListener('submit', runevent);
+
+function runevent(e) {
+	e.preventDefault();
+	console.log('Event Type: '+e.type)
+	console.log(e.target.value)
+	// output.innerHTML = '<h3>'+e.target.value+'</h3>'
 }
+
